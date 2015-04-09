@@ -27,14 +27,6 @@
 
 @implementation HPLeftMenu
 
-- (HMCommonArrowItem *)clearCache
-{
-    if (!_clearCache) {
-        _clearCache = [HMCommonArrowItem itemWithTitle:@"清除图片缓存"];
-    }
-    return _clearCache;
-}
-
 -(NSMutableArray *)groups
 {
     if (!_groups) {
@@ -61,15 +53,7 @@
     self.tableView.width = 240;
     
     [self setupGroup0];
-//    [self setupGroup1];   
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:YES];
-    
-//    [self.tableView reloadData];
-    [self setupGroup1];
+    [self setupGroup1];   
 }
 
 - (void)setupGroup0
@@ -94,10 +78,6 @@
     // 2.设置组的所有行数据
     HMCommonArrowItem *clearCache = [HMCommonArrowItem itemWithTitle:@"清除图片缓存"];
     _clearCache = clearCache;
-    
-
-//    NSString *imageCachePath = [SDImageCache sharedImageCache].getSize;
-//    double fileSize = [SDImageCache sharedImageCache].getSize;
    
     _clearCache.subtitle = [self getCacheSize];
     

@@ -39,8 +39,8 @@
     HPVoiceController *voice = [[HPVoiceController alloc] init];
     [self addOneChlildVc:voice title:@"轻松电台" imageName:@"收听" selectedImageName:@"tabbar_discover_selected"];
     
-//    HPVideoController *video = [[HPVideoController alloc] init];
-//    [self addOneChlildVc:video title:@"爆笑视频" imageName:@"搞笑" selectedImageName:@"tabbar_profile_selected"];
+    HPVideoController *video = [[HPVideoController alloc] init];
+    [self addOneChlildVc:video title:@"爆笑视频" imageName:@"搞笑" selectedImageName:@"tabbar_profile_selected"];
     
     // 开启夜间模式
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(openNight) name:HPSwitchOpen object:nil];
