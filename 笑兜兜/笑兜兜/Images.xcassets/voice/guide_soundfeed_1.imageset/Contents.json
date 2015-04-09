@@ -1,0 +1,24 @@
+{
+  "images" : [
+    {
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x",
+      "filename" : "guide_soundfeed_1@2x.png"
+    },
+    {
+      "idiom" : "universal",
+      "filename" : "guide_soundfeed_1-568h@2x.png",
+      "unassigned" : true,
+      "subtype" : "retina4",
+      "scale" : "2x"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}

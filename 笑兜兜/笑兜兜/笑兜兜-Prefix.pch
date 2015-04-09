@@ -1,0 +1,108 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+
+#import "UIImage+Extension.h"
+#import "UIBarButtonItem+Extension.h"
+#import "MBProgressHUD+MJ.h"
+#import "MBProgressHUD.h"
+#import "MJRefresh.h"
+#import "AFNetworking.h"
+#import "MJExtension.h"
+#import "UIView+Extension.h"
+#import "FMDB.h"
+
+#ifdef DEBUG // 调试状态, 打开LOG功能
+#define HPLog(...) NSLog(__VA_ARGS__)
+#define CsyLogObject(a) NSLog(@"%@",(a))
+#else // 发布状态, 关闭LOG功能
+#define HPLog(...)
+#define CsyLogObject((a))
+#endif
+
+// 屏幕宽度
+#define HPScreenW  [UIScreen mainScreen].bounds.size.width
+#define HPScreenH  [UIScreen mainScreen].bounds.size.height
+
+// 颜色
+#define HPColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+
+// 颜色和透明度
+#define HPColorAlpha(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:a]
+// 随机色
+#define HPRandomColor [UIColor colorWithRed:arc4random_uniform(256)/255.0 green:arc4random_uniform(256)/255.0 blue:arc4random_uniform(256)/255.0 alpha:1.0]
+// 是否为iOS7
+#define iOS7 ([[UIDevice currentDevice].systemVersion doubleValue] >= 7.0)
+
+#define HPGroupNameFont [UIFont boldSystemFontOfSize:16]
+#define HPGroupContentFont [UIFont systemFontOfSize:15]
+
+
+
+#define CsyColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+
+// 随机色
+#define CsyRandomColor CsyColor(arc4random_uniform(256), arc4random_uniform(256),arc4random_uniform(256))
+
+//导航栏title字体大小
+#define NavigationTitleFont [UIFont boldSystemFontOfSize:20]
+
+// 是否为4inch
+#define FourInch ([UIScreen mainScreen].bounds.size.height == 568.0)
+
+// 屏幕尺寸
+#define CsyScreenW [UIScreen mainScreen].bounds.size.width
+
+//joke
+// joke的内边距
+#define CsyJokeMargin 10
+
+//joke 用户名字体大小
+#define CsyJokeUserNameFont [UIFont systemFontOfSize:14]
+
+// joke 文本字体大小
+#define CsyJokeTextFont [UIFont systemFontOfSize:14]
+
+// joke 投票文本字体
+#define CsyJokeVotesFont [UIFont systemFontOfSize:12]
+
+// joke 评论文本字体
+#define CsyJokeCommentsFont [UIFont systemFontOfSize:12]
+
+// 评论的内边距
+#define CsyCommentsMargin 10
+
+// joke 评论楼层文本字体
+#define CsyJokeCommentsFloorFont [UIFont systemFontOfSize:12]
+// joke 评论文本字体
+#define CsyJokeCommentsTextFont [UIFont systemFontOfSize:14]
+
+//匿名用户
+#define CsyJokeNoName @"匿名用户"
+
+#define HPLeftMenuNotification @"leftMenuClickNotificaiton"
+#define HPSwitchOpen @"switchChange"
+#define HPSwitchClose @"switchClose"
+#define HPNightModel @"nightOrDay"
+//Csy添加
+#import "NSString+Tools.h"
+#import "UIImageView+CsyDownload.h"
+#import "UIImage+Tools.h"
+#import "UIButton+ViedoBtnBackgroundImage.h"
+#import "UIView+Extension.h"
+
+
+
+#endif
